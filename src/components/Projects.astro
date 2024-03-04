@@ -1,0 +1,81 @@
+---
+
+import type { Code } from 'astro:components'
+import Badge from './Badge.astro'
+
+const TAGS = {
+    NEXT: { 
+        name:'Next.js',
+        class:'bg-black text-white'
+    },
+    TAILWIND:{
+        name:'Tailwind',
+        class:'bg-blue-500 text-white'
+    }
+}
+const PROJECTS = [
+    {
+        title: 'TWastboy',
+        description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
+        img:'../public/883shots_so.png',
+        technologys: ['React', 'Tailwind', 'VScode'],
+    },
+    {
+        title: 'tic-tac-toe',
+        description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
+        img:'https://placehold.co/600x400',
+        technologys: ['React', 'Tailwind', 'VScode'],
+    },
+    {
+        title: 'Climate-Iguaçu',
+        description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
+        img:'https://placehold.co/600x400',
+        technologys: ['React', 'Tailwind', 'VScode'],
+    }
+]
+
+---
+
+{
+    PROJECTS.map((project) => (
+    <div class="w-full mt-4 mx-auto lg:w-[740px] flex flex-col items-center border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg " src=`${project.img}` alt="" />
+    </a>
+    <div class="self-start p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-emerald-300 dark:text-white">{project.title}</h5>
+        </a>
+        <div>
+            <p class="mb-3 font-normal text-white dark:text-gray-400">{project.description}</p>
+            <ul class="flex flex-row">    
+                {project.technologys.map((technology) => (
+                    <li>{technology}</li>
+                ))}
+            </ul>
+        <a
+          href="#"
+          class="inline-flex items-center px-4 py-2 text-sm font-bold text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-emerald-700 hover:font-bold focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-emerald-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a>
+      </div>
+  </div>
+</div>
+    ))
+}
+
