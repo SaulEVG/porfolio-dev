@@ -1,36 +1,62 @@
 ---
 
-import type { Code } from 'astro:components'
-import Badge from './Badge.astro'
 
 const TAGS = {
-    NEXT: { 
+    Next: { 
         name:'Next.js',
-        class:'bg-black text-white'
+        class:'bg-black text-white border rounded border-white ',
+        icon: '../public/nextjs.svg',
     },
-    TAILWIND:{
+    Tailwind:{
         name:'Tailwind',
-        class:'bg-blue-500 text-white'
+        class:'bg-sky-900 text-white border rounded border-white ',
+        icon:'../public/tailwindcss.svg'
+    },
+    Astro:{
+        name:'Astro',
+        class:'bg-black text-white border rounded border-white ',
+        icon:'../public/astro_dark.svg'
+    },
+    JavaScript:{
+        name:'JavaScript',
+        class:'bg-amber-400 text-black border rounded border-black ',
+        icon:'../public/javascript.svg'
+    },
+    React:{
+        name:'React',
+        class:'bg-sky-700 text-white border rounded border-sky-200 ',
+        icon:'../public/react.svg'
+    },
+    Express:{
+        name:'Express',
+        class:'bg-black text-white border rounded border-white',
+        icon:'../public/expressjs_dark.svg'
+    },
+    NODE:{
+        name:'Node.js',
+        class:'bg-black text-green-500 border rounded border-white',
+        icon:'../public/nodejs.svg'
     }
+
 }
 const PROJECTS = [
     {
         title: 'TWastboy',
         description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
         img:'../public/883shots_so.png',
-        technologys: ['React', 'Tailwind', 'VScode'],
+        technologys: [TAGS.Next, TAGS.Tailwind, TAGS.Express ],
     },
     {
         title: 'tic-tac-toe',
         description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
         img:'https://placehold.co/600x400',
-        technologys: ['React', 'Tailwind', 'VScode'],
+        technologys: [TAGS.React, TAGS.JavaScript],
     },
     {
         title: 'Climate-Iguaçu',
         description: 'lorem asddfgbldf asdfkasd asdjkfhasd adsfkjsdah asdkfjhsdf adjfhjksdfh jhsdfhasdfjk kasdfjkjasdfjh asdhfhsdfh usdfb  jhusdf  hdf fhdf fh ',
         img:'https://placehold.co/600x400',
-        technologys: ['React', 'Tailwind', 'VScode'],
+        technologys: [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind],
     }
 ]
 
@@ -48,9 +74,12 @@ const PROJECTS = [
         </a>
         <div>
             <p class="mb-3 font-normal text-white dark:text-gray-400">{project.description}</p>
-            <ul class="flex flex-row">    
+            <ul class="flex flex-row"> 
                 {project.technologys.map((technology) => (
-                    <li>{technology}</li>
+                    <li class={`${technology.class} m-1 font-semibold gap-x-2 px-2 flex flex-row items-center`}>
+                        <img class="size-5" src={technology.icon} alt="">
+                        {technology.name}
+                    </li>
                 ))}
             </ul>
         <a
