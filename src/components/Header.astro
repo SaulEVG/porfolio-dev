@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import saulPhoto from "../imgs/saulEVG.jpeg";
+---
+
 <header
   class="flex justify-between xl:flex-row flex-col-reverse gap-y-20 items-center py-3 w-full xl:w-[1120px] mx-auto"
 >
-  <img
+  <Image
     class="rounded-full size-40 xl:size-20 outline outline-1"
-    src="../imgs/saulEVG.jpg"
+    src={saulPhoto}
     alt="SaulEVG with his cat Coffe"
   />
   <nav class="flex flex-row gap-x-10 opacity-80 font-bold">
