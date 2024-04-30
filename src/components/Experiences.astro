@@ -1,43 +1,42 @@
 ---
-import ExperiencesItem from './ExperiencesItem.astro'
+import ExperiencesItem from "./ExperiencesItem.astro";
 
 const EXPERIENCES = [
-    {
-        date:'Present...',
-        title: 'Services consultan',
-        description:'Help cliente to choose the best Plan of payment, make finnacil consults, getting credit to sell Products',
-        link:'https://www.colombo.com.br',
-        enterprise:`Lojas Colombo`
-    },
-    {
-        date:'2023',
-        title: 'Sales man',
-        description:'I worked in sales at Magazine Luiza in Brazil, improving my Portuguese and learning negotiation, sales, and customer service skills.',
-        link:'https://www.magazineluiza.com.br/',
-        enterprise:`Magalu`
-    },
-    {
-        date:'2019 - 2023',
-        title: 'Digital Services Manager',
-        description:"Remotely supports clients on Discord, providing budget estimates in their local currencies. I`ve assisted clients from various countries like Australia, NZ, US, Netherlands, and UK, all from my home office.",
-        link:'',
-        enterprise:`Magalu`
-    },
-    {
-        date:'2018 - 2019',
-        title: 'Petroleum Engineering Practices',
-        description:"As a petroleum project trainee, I assisted engineers in monitoring and reporting on well performance and production. I ensured the well's daily operation ran smoothly and efficiently.",
-        link:'',
-        enterprise:`Magalu` 
-    }
-]
----
-<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
   {
-  EXPERIENCES.map((experiences) => (
-    <ExperiencesItem {...experiences}/>
-    )  
-  )
-  }
-</ol>
+    date: "Present...",
+    title: "Services consultan",
+    description:
+      "Help cliente to choose the best Plan of payment, make finnacil consults, getting credit to sell Products",
+    link: "https://www.colombo.com.br",
+    enterprise: `Lojas Colombo`,
+  },
+  {
+    date: "2023",
+    title: "Sales man",
+    description:
+      "I worked in sales at Magazine Luiza in Brazil, improving my Portuguese and learning negotiation, sales, and customer service skills.",
+    link: "https://www.magazinevoce.com.br/magazinesulplus/",
+    enterprise: `Magalu`,
+  },
+  {
+    date: "2019 - 2023",
+    title: "Digital Services Manager",
+    description:
+      "Remotely supports clients on Discord, providing budget estimates in their local currencies. I`ve assisted clients from various countries like Australia, NZ, US, Netherlands, and UK, all from my home office.",
+    link: "",
+    enterprise: `Discord Server`,
+  },
+  {
+    date: "2018 - 2019",
+    title: "Petroleum Engineering Practices",
+    description:
+      "As a petroleum project trainee, I assisted engineers in monitoring and reporting on well performance and production. I ensured the well's daily operation ran smoothly and efficiently.",
+    link: "http://www.pdvsa.com/",
+    enterprise: `PDVSA`,
+  },
+];
+---
 
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {EXPERIENCES.map((experiences) => <ExperiencesItem {...experiences} />)}
+</ol>

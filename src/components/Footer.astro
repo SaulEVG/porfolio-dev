@@ -1,0 +1,60 @@
+---
+import Github from "./icons/Github.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Mail from "./icons/Mail.astro";
+---
+
+<footer
+  class="bg-emerald-500 flex flex-col items-center mt-7 shadow-2xl shadow-emerald-500 gap-4"
+>
+  <nav class="flex flex-row gap-x-14 opacity-80 font-bold mt-3">
+    <a
+      class="hover:text-emerald-200 hover:bg-opacity-15 hover:rounded-sm lg:text-lg text-sm"
+      href="/">Home</a
+    >
+    <a
+      class="hover:text-emerald-200 hover:bg-opacity-15 hover:rounded-sm lg:text-lg text-sm"
+      href="/about">About</a
+    >
+    <a
+      class="hover:text-emerald-200 hover:bg-opacity-15 hover:rounded-sm lg:text-lg text-sm"
+      href="#experiences">Experiences</a
+    >
+    <a
+      class="hover:text-emerald-200 hover:bg-opacity-15 hover:rounded-sm lg:text-lg text-sm"
+      href="/projects">Projects</a
+    >
+    <a
+      class="hover:text-emerald-200 hover:bg-opacity-15 hover:rounded-sm lg:text-lg text-sm"
+      href="/contact">Contact</a
+    >
+  </nav>
+  <nav>
+    <ul class="flex flex-row gap-x-5">
+      <li>
+        <a href="https://www.linkedin.com/in/saulevg">
+          <LinkedIn class="" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.github.com/SaulEVG" target="_blank">
+          <Github class="size-6" />
+        </a>
+      </li>
+      <li class="flex items-center gap-2">
+        <a href="mailto:saulevg.services@gmail.com" target="_blank"><Mail /></a>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <a href="https://astro.build/" class="flex items-center flex-col"
+      >Made with Astro
+      <img
+        class="h-5"
+        src="../../public/astro_dark.svg"
+        alt="astro logo"
+        srcset=""
+      />
+    </a>
+  </div>
+</footer>

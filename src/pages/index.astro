@@ -5,8 +5,9 @@ import Github from "../components/icons/Github.astro";
 import Mail from "../components/icons/Mail.astro";
 import Experiences from "../components/Experiences.astro";
 import Badge from "../components/Badge.astro";
-import Container from "../components/Container.astro"
-import Projects from "../components/Projects.astro"
+import Container from "../components/Container.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="SaulEVG`s Portfolio - Petroleum Engineer and Web Developer">
@@ -18,7 +19,8 @@ import Projects from "../components/Projects.astro"
         Hey, Im <b class="text-emerald-400">SaulEVG</b>
         <Badge>
           <a href="https://www.linkedin.com/in/saulevg" target="_blank"
-            >Open to Work</a>
+            >Open to Work</a
+          >
         </Badge>
       </h1>
       <h2 class="text-xl text-wrap mb-2">
@@ -27,41 +29,69 @@ import Projects from "../components/Projects.astro"
       </h2>
       <ul class="flex flex-row">
         <li>
-          <a href="https://www.linkedin.com/in/saulevg" >
-            <LinkedIn class=""/>
+          <a href="https://www.linkedin.com/in/saulevg">
+            <LinkedIn class="" />
           </a>
         </li>
         <li>
           <a href="https://www.github.com/SaulEVG" target="_blank">
-            <Github class="size-6"/>
+            <Github class="size-6" />
           </a>
         </li>
-		<li class="flex items-center gap-2">
-			<a  href="mailto:valdez.ernesto@gmail.com" target="_blank"><Mail/></a><b class="rounded bg-emerald-200 text-emerald-950 px-2 text-lg"> valdez.ernesto@gmail.com</b>
-		</li>
+        <li class="flex items-center gap-2">
+          <a href="mailto:saulevg.services@gmail.com" target="_blank"
+            ><Mail /></a
+          ><b class="rounded bg-emerald-200 text-emerald-950 px-2 text-lg">
+            saulevg.services@gmail.com</b
+          >
+        </li>
       </ul>
     </Container>
-	<Container id="experiences">
-		<h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-10 -ml-5">
-			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase size-10 "  viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				<path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-				<path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-				<path d="M12 12l0 .01" />
-				<path d="M3 13a20 20 0 0 0 18 0" />
-			  </svg>Work Experiences</h2>
-		<Experiences />
-	</Container>
-	<Container id="projects">
-		<h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-10 -ml-5">
-			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				<path d="M7 8l-4 4l4 4" />
-				<path d="M17 8l4 4l-4 4" />
-				<path d="M14 4l-4 16" />
-			  </svg>Projects</h2>
-			  <Projects/>
-
-	</Container>
+    <Container id="experiences">
+      <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-10 -ml-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-briefcase size-10"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#ffffff"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+          ></path>
+          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+          <path d="M12 12l0 .01"></path>
+          <path d="M3 13a20 20 0 0 0 18 0"></path>
+        </svg>Work Experiences
+      </h2>
+      <Experiences />
+    </Container>
+    <Container id="projects">
+      <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-10 -ml-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-code"
+          width="44"
+          height="44"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#ffffff"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M7 8l-4 4l4 4"></path>
+          <path d="M17 8l4 4l-4 4"></path>
+          <path d="M14 4l-4 16"></path>
+        </svg>Projects
+      </h2>
+      <Projects />
+    </Container>
   </main>
+  <Footer />
 </Layout>

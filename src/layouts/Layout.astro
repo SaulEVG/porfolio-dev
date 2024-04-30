@@ -1,41 +1,45 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 
-import '@fontsource-variable/source-code-pro'
-import Header from '../components/Header.astro'
+import "@fontsource-variable/source-code-pro";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth absolute top-0 z-[-2] h-screen w-screen bg-no-repeat
- bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="px-5">
-		<Header/>
-		<slot />
-	</body>
+<html
+  lang="en"
+  class="scroll-smooth absolute top-0 z-[-2] h-screen w-full bg-no-repeat
+ bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/public/S.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="">
+    <Header />
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-	html {
-		font-family: Source Code Pro Variable, sans-serif;
-		
-	}
-	body{
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family:
+      Source Code Pro Variable,
+      sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 </style>
