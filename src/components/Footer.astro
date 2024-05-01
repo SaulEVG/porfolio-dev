@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Github from "./icons/Github.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
+import astroLogo from "../imgs/astro_dark.svg";
 ---
 
 <footer
@@ -49,12 +51,7 @@ import Mail from "./icons/Mail.astro";
   <div>
     <a href="https://astro.build/" class="flex items-center flex-col"
       >Made with Astro
-      <img
-        class="h-5"
-        src="../../public/astro_dark.svg"
-        alt="astro logo"
-        srcset=""
-      />
+      <Image class="h-5" src={astroLogo} alt="astro logo" srcset="" />
     </a>
   </div>
 </footer>
