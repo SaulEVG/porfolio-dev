@@ -20,8 +20,8 @@ const TAGS = {
   },
   JavaScript: {
     name: "JavaScript",
-    class: "bg-amber-300 text-black border rounded border-black ",
-    icon: "/javascript.svg",
+    class: "bg-yellow-300 text-black border rounded border-black ",
+    icon: "/js02-svgrepo-com.svg",
   },
   React: {
     name: "React",
@@ -48,7 +48,7 @@ const PROJECTS = [
   {
     title: "CharTY",
     description:
-      "JA lightweight SPA built with React and TypeScript, displaying historical price data in candlestick chart format for various assets including stocks, indices, funds, cryptocurrencies, etc. ",
+      "A lightweight SPA built with React and TypeScript, displaying historical price data in candlestick chart format for various assets including stocks, indices, funds, cryptocurrencies, etc. ",
     img: "/883shots_so.png",
     technologys: [TAGS.TypeScript, TAGS.React],
   },
@@ -80,7 +80,7 @@ const PROJECTS = [
         <Image
           class="size-1000 xl:size-fit mt-4 "
           src={project.img}
-          alt=""
+          alt={project.description}
           width="600"
           height="800"
         />
@@ -95,21 +95,23 @@ const PROJECTS = [
           <p class="mb-3 font-normal text-white dark:text-gray-400">
             {project.description}
           </p>
-          <ul class="flex flex-row">
+          <ul class="flex flex-row flex-wrap">
             {project.technologys.map((technology) => (
               <li
-                class={`${technology.class} m-2 font-semibold gap-x-2 px-2 flex flex-row items-center`}
+                class={`${technology.class} m-2 font-semibold gap-x-2 py-2 px-2 flex  flex-row items-center`}
               >
                 <Image
-                  class="size-5"
+                  class="size-5 "
                   src={technology.icon}
-                  alt=""
+                  alt=`${technology.name} icon`
                   width="200"
                   height="150"
                 />
-                {technology.name}
+                <div class="sm:hidden">{technology.name}</div>
+               
               </li>
             ))}
+             
           </ul>
           <a
             href="#"
