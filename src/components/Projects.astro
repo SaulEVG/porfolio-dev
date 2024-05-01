@@ -1,48 +1,47 @@
 ---
 import { Image } from "astro:assets";
-import reactIcon from '../imgs/react.svg'
-import imagePlaceHolder from "../imgs/placeholder800x800.png";
+
 
 const TAGS = {
   Next: {
     name: "Next.js",
     class: "bg-black text-white rounded ",
-    icon: "../nextjs.svg",
+    icon: "/nextjs.svg",
   },
   Tailwind: {
     name: "Tailwind",
     class: "bg-sky-600 text-white rounded ",
-    icon: "../tailwindcss.svg",
+    icon: "/tailwindcss.svg",
   },
   Astro: {
     name: "Astro",
     class: "bg-black text-white rounded ",
-    icon: "../astro_dark.svg",
+    icon: "/astro_dark.svg",
   },
   JavaScript: {
     name: "JavaScript",
     class: "bg-amber-300 text-black border rounded border-black ",
-    icon: "../javascript.svg",
+    icon: "/javascript.svg",
   },
   React: {
     name: "React",
     class: "bg-sky-700 text-white rounded  ",
-    icon: '../react.svg',
+    icon: '/react.svg',
   },
   Express: {
     name: "Express",
     class: "bg-black text-white rounded",
-    icon: "../expressjs_dark.svg",
+    icon: "/expressjs_dark.svg",
   },
   NODE: {
     name: "Node.js",
     class: "bg-black text-green-500 rounded",
-    icon: "../nodejs.svg",
+    icon: "/nodejs.svg",
   },
   TypeScript: {
     name: "TypeScript",
     class: "bg-blue-950 text-white rounded",
-    icon: "../typescript.svg",
+    icon: "/typescript.svg",
   },
 };
 const PROJECTS = [
@@ -50,25 +49,25 @@ const PROJECTS = [
     title: "CharTY",
     description:
       "JA lightweight SPA built with React and TypeScript, displaying historical price data in candlestick chart format for various assets including stocks, indices, funds, cryptocurrencies, etc. ",
-    img: "src/imgs/883shots_so.png",
+    img: "/883shots_so.png",
     technologys: [TAGS.TypeScript, TAGS.React],
   },
   {
     title: "MAGALLAMA",
     description: "Work in progress... ",
-    img: '../placeholder800x800.png',
+    img: '/placeholder800x800.png',
     technologys: [TAGS.React, TAGS.JavaScript],
   },
   {
     title: "Nu-Controller",
     description: "Work in progress... ",
-    img: '../placeholder800x800.png',
+    img: '/placeholder800x800.png',
     technologys: [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind],
   },
   {
     title: "Revalida Page",
     description: "Work in progress... ",
-    img: '../placeholder800x800.png',
+    img: '/placeholder800x800.png',
     technologys: [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind],
   },
 ];
