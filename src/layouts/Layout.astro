@@ -1,4 +1,5 @@
 ---
+import faviconS from "/public/S.png";
 interface Props {
   title: string;
 }
@@ -19,7 +20,7 @@ import Header from "../components/Header.astro";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="png" href="src/imgs/S.png" />
+    <link rel="icon" type="svg" href={"/public/S.png"} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
