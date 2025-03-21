@@ -7,10 +7,15 @@ const TAGS = {
     name: "Next.js",
     class: "bg-black text-white rounded ",
     icon: "/nextjs.svg",
-  },
+    },
+  Go: {
+    name: "Go",
+    class: "bg-sky-50  text-white rounded ",
+    icon:"/Go-Logo_Blue.svg",
+   },
   Tailwind: {
     name: "Tailwind",
-    class: "bg-sky-600 text-white rounded ",
+    class: "bg-sky-600  rounded ",
     icon: "/tailwindcss.svg",
   },
   Astro: {
@@ -44,33 +49,33 @@ const TAGS = {
     icon: "/typescript.svg",
   },
 };
+
 const PROJECTS = [
   {
-    title: "CharTY",
-    description:
-      "A lightweight SPA built with React and TypeScript, displaying historical price data in candlestick chart format for various assets including stocks, indices, funds, cryptocurrencies, etc. ",
-    img: "/883shots_so.png",
-    technologys: [TAGS.TypeScript, TAGS.React],
+    "title": "CharTY - Interactive Market Charts",
+    "description": "A lightweight and dynamic Single Page Application (SPA) built with React and TypeScript, designed to visualize historical price data using candlestick charts. Supports multiple asset classes, including stocks, indices, funds, and cryptocurrencies.",
+    "img": "/883shots_so.png",
+    "technologys": [TAGS.TypeScript, TAGS.React]
   },
   {
-    title: "MAGALLAMA",
-    description: "Work in progress... ",
-    img: '/placeholder800x800.png',
-    technologys: [TAGS.React, TAGS.JavaScript],
+    "title": "ANNA BEAUTY - Elegant Makeup Landing Page",
+    "description": "A visually appealing and responsive landing page designed for a beauty and makeup brand. Built with React and Tailwind CSS to provide a smooth and engaging user experience.",
+    "img": "/717shots_so.png",
+    "technologys": [TAGS.React, TAGS.JavaScript, TAGS.Tailwind]
   },
   {
-    title: "Nu-Controller",
-    description: "Work in progress... ",
-    img: '/placeholder800x800.png',
-    technologys: [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind],
+    "title": "Velocity & Altitude Tracker",
+    "description": "A simple yet effective web app for recording velocity and altitude during cycling sessions. Eliminates the need for paid apps by allowing users to log data and export it as a CSV for personal analytics.",
+    "img": "/581shots_so.png",
+    "technologys": [TAGS.JavaScript, TAGS.Go]
   },
   {
-    title: "Revalida Page",
-    description: "Work in progress... ",
-    img: '/placeholder800x800.png',
-    technologys: [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind],
-  },
-];
+    "title": "Revalida Page - Work in Progress",
+    "description": "An ongoing project focused on building a web platform for Revalida-related content. Developed with JavaScript, Express, Astro, and Tailwind for a modern and optimized experience.",
+    "img": "/placeholder800x800.png",
+    "technologys": [TAGS.JavaScript, TAGS.Express, TAGS.Astro, TAGS.Tailwind]
+  }
+]
 ---
 
 {
@@ -97,17 +102,15 @@ const PROJECTS = [
           </p>
           <ul class="flex flex-row flex-wrap">
             {project.technologys.map((technology) => (
-              <li
-                class={`${technology.class} m-2 font-semibold gap-x-2 py-2 px-2 flex  flex-row items-center`}
-              >
+              <li class={`${technology.class} m-2 font-semibold gap-x-2 py-2 px-2 flex  flex-row items-center`}>
                 <Image
-                  class="size-5 "
+                  class="size-8"
                   src={technology.icon}
                   alt=`${technology.name} icon`
-                  width="200"
-                  height="150"
+                  width="350"
+                  height="250"
                 />
-                <div  class="xm:hidden">{technology.name}</div>
+                <div  class="xm:hidden">{technology.name}></div>
                
               </li>
             ))}
