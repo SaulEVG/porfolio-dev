@@ -37,6 +37,6 @@ El sitio estará disponible en `http://localhost:3000`.
 ## 📢 Contacto
 Si deseas ponerte en contacto conmigo, puedes encontrarme en:
 - **LinkedIn:** [linkedin.com/in/saulEVG](https://www.linkedin.com/in/saulEVG)
-- **Email:** saul@example.com
+- **Email:** saulevg.services@gmail.com
 
 ¡Gracias por visitar mi portafolio! 😊
